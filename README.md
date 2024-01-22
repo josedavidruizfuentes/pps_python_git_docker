@@ -1,1 +1,7 @@
-Vamos a crear una aplicación web llamada "La Bayeta de la Fortuna" que cada vez que accedamos, nos dirá texto auspicioso aleatorio.
+Para instalar las dependencias correspondientes exportadas al fichero "requirements.txt", ejecutar:
+
+pip install -r requirements.txt
+
+Para ejecutar la aplicación, ejecutar:
+
+python3 app.py
