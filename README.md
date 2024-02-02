@@ -29,6 +29,10 @@ Ahora, hemos añadido a nuestra aplicación una base de datos MongoDB, la cual s
 docker network create mongo_network
 docker run -d --network mongo_network -p 27017:27017 --name mi-mongo mongo
 
+Para implementar la base de datos en nuestra aplicación, hemos añadido nuevas dependencias al fichero "requirements.txt". Para instalarlas, ejecutar:
+
+pip install -r requirements.txt
+
 En el caso de que ya tengamos una imagen anterior de nuestra aplicación, debemos eliminarla y volver a crearla con la nueva configuración de la base de datos. Para ello, ejecutamos:
 
 docker rmi bayeta-app
