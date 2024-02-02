@@ -44,3 +44,8 @@ docker run -d --network mongo_network -p 5000:5000 bayeta-app
 
 De nuevo, accedemos a: 'http://localhost:5000/frotar/<n_frases>', donde '<n_frases>' es el número de frases auspiciosas que queremos ver.
 
+Para facilitar el proceso de creación de la red de Docker y el levantamiento de los contenedores, vamos a usar Docker-compose. Para ello, hemos creado un fichero "compose.yml" que contiene la configuración de los servicios que vamos a levantar. Para levantar los contenedores, ejecutamos:
+
+docker-compose up
+
+De nuevo, accedemos a: 'http://localhost:5000/frotar/<n_frases>', donde '<n_frases>' es el número de frases auspiciosas que queremos ver.

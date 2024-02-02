@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  bayeta-app:
+    build:
+      context: .
+      dockerfile: Dockerfile  
+    ports:
+      - "5000:5000"
+    networks:
+      - mongo_network
+
+  mi-mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - mongo_network
+
+networks:
+  mongo_network:
+    driver: bridge
