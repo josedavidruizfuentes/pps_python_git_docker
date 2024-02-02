@@ -46,9 +46,20 @@ def consulta(n_frases):
 
     # Cerrar cliente
     cliente_mongo.close()
-    
+
     # Devolver las frases como una lista de strings
     return [frase['frase'] for frase in frases_aleatorias]
+
+def insertar_datos(nuevas_frases):
+    # Obtener instancias de motor y colección
+    cliente_mongo, frases_auspiciosas = instanciacion()
+
+    # Inserción de nuevas frases
+    frases_nuevas = [{"frase": frase} for frase in nuevas_frases]
+    frases_auspiciosas.insert_many(frases_nuevas)
+
+    # Cerrar cliente
+    cliente_mongo.close()
 
 # Rutas a los archivos de datos y ejecución de funciones
 ruta_archivo_datos = "frases.txt"
