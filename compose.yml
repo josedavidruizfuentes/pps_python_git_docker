@@ -4,7 +4,7 @@ services:
   bayeta-app:
     build:
       context: .
-      dockerfile: Dockerfile  
+      dockerfile: Dockerfile
     ports:
       - "5000:5000"
     networks:
@@ -16,7 +16,13 @@ services:
       - "27017:27017"
     networks:
       - mongo_network
+    volumes:
+      - mi-mongo-data:/data/db
 
 networks:
   mongo_network:
     driver: bridge
+
+volumes:
+  mi-mongo-data:
+    driver: local
